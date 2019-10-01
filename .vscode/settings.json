@@ -1,0 +1,17 @@
+{
+  "workbench.colorCustomizations": {
+    "[Horizon Bold]": {
+      "editorSuggestWidget.background": "#1C1E26",
+      "editorSuggestWidget.border": "#1C1E26",
+      "editorSuggestWidget.foreground": "#d9d9d9",
+      "editorIndentGuide.background": "#262833",
+      "editorWhitespace.foreground": "#303240",
+      "editor.findMatchBackground": "#F77D26",
+      "editor.findMatchHighlightBackground": "#F77D26a9",
+      "contrastBorder": "#16171F",
+      "peekView.border": "#ff0000",
+      "activityBar.background": "#16171f"
+    },
+    "tab.unfocusedActiveBorder": "#fff0"
+  }
+}

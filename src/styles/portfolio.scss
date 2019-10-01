@@ -1,0 +1,34 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#gatsby-focus-wrapper,
+#___gatsby {
+  height: 100vh;
+}
+
+main {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcome {
+  width: 750px;
+}
+
+.isometric-board {
+  width: calc(100% - 750px);
+}

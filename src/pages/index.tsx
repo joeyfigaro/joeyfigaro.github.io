@@ -3,13 +3,13 @@ import { Link } from 'gatsby';
 
 import Board from '../components/board';
 import IsometricBoard from '../components/isometric-board';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Image from '../components/image';
-import SEO from '../components/seo';
+// import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout className="portfolio">
-    <SEO title="Home" />
+    {/*<SEO title="Home" />*/}
     <div className="welcome">
       <h1>
         Joey Figaro is a developer, tinkerer, and entrepreneur based in

@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import Board from '../components/board';
 import IsometricBoard from '../components/isometric-board';
 import Layout from '../components/Layout';
 import Image from '../components/image';
+import Intro from '../components/Intro';
 // import SEO from '../components/seo';
 
 const IndexPage = () => (
   <Layout className="portfolio">
     {/*<SEO title="Home" />*/}
-    <div className="welcome">
+    <Intro />
+    {/*<div className="welcome">
       <h1>
         Joey Figaro is a developer, tinkerer, and entrepreneur based in
         Richmond, VA.
@@ -23,7 +26,7 @@ const IndexPage = () => (
       </p>
       <p>I’m currently accepting clients at Shovel & Sandbox.</p>
     </div>
-    <IsometricBoard />
+  <IsometricBoard />*/}
   </Layout>
 );
 

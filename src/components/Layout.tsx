@@ -7,6 +7,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
@@ -32,8 +33,9 @@ const Layout = ({
     }
   `);
 
+  /* className="grt" */
   return (
-    <div className="grt">
+    <div className="portfolio">
       <main>{children}</main>
       <Footer />
     </div>

@@ -5,6 +5,12 @@ module.exports = {
     author: `@joeyfigaro`
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: './src/typography.ts'
+      }
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -39,14 +45,6 @@ module.exports = {
           {
             family: 'Ovo',
             variants: [`400`, `600`, `800`]
-          },
-          {
-            family: `Playfair Display`,
-            variants: [`400`, `700`, `900`]
-          },
-          {
-            family: `Source Sans Pro`,
-            variants: [`200`, `300`, `400`, `600`, `700`]
           }
         ]
       }

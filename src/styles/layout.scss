@@ -1,7 +1,7 @@
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  // font-family: 'Cartograph CF', monospace;
+  // -ms-text-size-adjust: 100%;
+  // -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
@@ -62,7 +62,7 @@ dfn {
 }
 
 h1 {
-  font-size: 2em;
+  // font-size: 2em;
   margin: 0.67em 0;
 }
 mark {
@@ -70,11 +70,11 @@ mark {
   color: #000;
 }
 small {
-  font-size: 80%;
+  // font-size: 80%;
 }
 sub,
 sup {
-  font-size: 75%;
+  // font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -96,7 +96,7 @@ kbd,
 pre,
 samp {
   font-family: monospace, monospace;
-  font-size: 1em;
+  // font-size: 1em;
 }
 figure {
   margin: 1em 40px;
@@ -186,7 +186,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  // font: 112.5%/1.45em 'Cartograph CF', monospace;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -202,7 +202,7 @@ html {
 body {
   color: hsla(255, 255%, 255%, 0.98);
   background-color: #0c0c0c;
-  font-family: georgia, serif;
+  font-family: 'Cartograph CF', monospace;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -236,8 +236,8 @@ h1 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 1.8rem;
-  line-height: 1.1;
+  // font-size: 1.8rem;
+  // line-height: 1.1;
 }
 h2 {
   margin-left: 0;
@@ -253,8 +253,8 @@ h2 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
-  line-height: 1.1;
+  // font-size: 1.62671rem;
+  // line-height: 1.1;
 }
 h3 {
   margin-left: 0;
@@ -270,8 +270,8 @@ h3 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
-  line-height: 1.1;
+  // font-size: 1.38316rem;
+  // line-height: 1.1;
 }
 h4 {
   margin-left: 0;
@@ -287,8 +287,8 @@ h4 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
-  line-height: 1.1;
+  // font-size: 1rem;
+  // line-height: 1.1;
 }
 h5 {
   margin-left: 0;
@@ -304,8 +304,8 @@ h5 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
-  line-height: 1.1;
+  // font-size: 0.85028rem;
+  // line-height: 1.1;
 }
 h6 {
   margin-left: 0;
@@ -321,8 +321,8 @@ h6 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
-  line-height: 1.1;
+  // font-size: 0.78405rem;
+  // line-height: 1.1;
 }
 hgroup {
   margin-left: 0;
@@ -403,8 +403,8 @@ pre {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 0.85rem;
-  line-height: 1.42;
+  // font-size: 0.85rem;
+  // line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
   overflow: auto;
@@ -420,8 +420,8 @@ table {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 1rem;
-  line-height: 1.45rem;
+  // font-size: 1rem;
+  // line-height: 1.45rem;
   border-collapse: collapse;
   width: 100%;
 }
@@ -542,16 +542,16 @@ li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  // font-size: 0.85rem;
+  // line-height: 1.45rem;
 }
 kbd {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  // font-size: 0.85rem;
+  // line-height: 1.45rem;
 }
 samp {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  // font-size: 0.85rem;
+  // line-height: 1.45rem;
 }
 abbr {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
@@ -617,8 +617,8 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
+// @media only screen and (max-width: 480px) {
+//   html {
+//     font-size: 100%;
+//   }
+// }

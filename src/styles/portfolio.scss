@@ -3,13 +3,21 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: 'Ovo', serif;
-  font-weight: 400;
+h6,
+p,
+li,
+a,
+em,
+code,
+blockquote {
+  font-family: 'Cartograph CF', monospace;
+  font-weight: 500;
 }
 
-p {
-  font-family: 'Source Sans Pro', sans-serif;
+.portfolio {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #gatsby-focus-wrapper,

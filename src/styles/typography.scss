@@ -1,6 +1,17 @@
+@font-face {
+  font-family: 'Cartograph CF';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/CartographCF-Bold.woff') format('woff'),
+    url('../fonts/CartographCF-DemiBold.woff') format('woff'),
+    url('../fonts/CartographCF-Heavy.woff') format('woff'),
+    url('../fonts/CartographCF-HeavyItalic.woff') format('woff'),
+    url('../fonts/CartographCF-Regular.woff') format('woff');
+}
+
 .grt {
   max-width: 600px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cartograph CF', monospace;
   font-size: 26px;
   line-height: 42px;
   padding: 26px;

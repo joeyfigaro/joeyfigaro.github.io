@@ -1,22 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-const CopyrightContainer = styled('div')`
-  width: 100%;
-  height: 101px;
-  padding: 32px;
-  border-top: #1e1e1e solid 1px;
-  display: flex;
-  flex-direction: column;
-  letter-spacing: 0.4px;
-`;
-
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 3px;
-`;
+import { Column, Row } from '../../Flex';
 
 const Prompt = styled('span')`
   color: #fefefe;
@@ -34,13 +19,19 @@ const PromptOutput = styled('span')`
 `;
 
 const Copyright = () => (
-  <CopyrightContainer>
-    <Row>
+  <Column
+    height={101}
+    p={32}
+    borderTop="#1e1e1e solid 1px"
+    whiteSpace="nowrap"
+    letterSpacing="0.4px"
+  >
+    <Row mb={1}>
       <Prompt>$ figs@mblocal ></Prompt>
       <PromptValue>copyright</PromptValue>
     </Row>
     <PromptOutput>Joey Figaro © 2019, All Rights Reserved</PromptOutput>
-  </CopyrightContainer>
+  </Column>
 );
 
 export default Copyright;

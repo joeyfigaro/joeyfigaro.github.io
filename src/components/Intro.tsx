@@ -28,13 +28,13 @@ function Scene({ top, mouse }) {
       />
       <Effects factor={top.interpolate([0, 50], [1, 0])} />
       <Stars position={top.interpolate(top => [0, -1 + top / 20, 0])} />
-      <Text
+      {/*<Text
         opacity={top.interpolate([0, 200], [1, 0])}
         position={top.interpolate(top => [0, -1 + top / 200, 0])}
         fontSize={120}
       >
         figaro
-      </Text>
+      </Text>*/}
     </>
   );
 }

@@ -1,1 +1,1 @@
-export default from './src/Copyright'
+export default from './src/Copyright';

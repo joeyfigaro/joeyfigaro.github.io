@@ -1,5 +1,5 @@
 {
-  "plugins": ["@babel/plugin-proposal-export-default-from"],
+  "plugins": ["emotion", "@babel/plugin-proposal-export-default-from"],
   "presets": [
     "@babel/preset-typescript",
     [
@@ -9,6 +9,7 @@
           "browsers": [">0.25%", "not dead"]
         }
       }
-    ]
+    ],
+    "@emotion/babel-preset-css-prop"
   ]
 }

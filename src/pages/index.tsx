@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
+import Hero from '../components/Hero';
 import Board from '../components/board';
 import IsometricBoard from '../components/isometric-board';
 import Layout from '../components/Layout';
@@ -12,7 +13,8 @@ import Intro from '../components/Intro';
 const IndexPage = () => (
   <Layout className="portfolio">
     {/*<SEO title="Home" />*/}
-    <Intro />
+    <Hero />
+    {/*<Intro /> */}
     {/*<div className="welcome">
       <h1>
         Joey Figaro is a developer, tinkerer, and entrepreneur based in

@@ -13,7 +13,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import Footer from './Footer';
 
-import '../styles/typography.scss';
+// import '../styles/typography.scss';
 import '../styles/layout.scss';
 import '../styles/portfolio.scss';
 

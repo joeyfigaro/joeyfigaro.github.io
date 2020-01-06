@@ -5,6 +5,7 @@ module.exports = {
     author: `@joeyfigaro`
   },
   plugins: [
+    'gatsby-plugin-react-svg',
     {
       resolve: 'gatsby-plugin-typography',
       options: {

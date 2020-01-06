@@ -1,23 +1,23 @@
-import React from 'react';
-import { useThree, Canvas, extend } from 'react-three-fiber';
-import { a, useSpring, apply as applySpring } from 'react-spring/three';
-import styled from '@emotion/styled';
+import React from 'react'
+import { useThree, Canvas, extend } from 'react-three-fiber'
+import { a, useSpring, apply as applySpring } from 'react-spring/three'
+import styled from '@emotion/styled'
 
-import Stars from './Generative/Stars';
-import Effects from './Generative/Effects';
-import Text from './Generative/Text';
+import Stars from './Generative/Stars'
+import Effects from './Generative/Effects'
+import Text from './Generative/Text'
 // import SplatterPaint from './Generative/SplatterPaint';
 
 const IntroWrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
-`;
+  // width: 100vw;
+  // height: 100vh;
+`
 
 // applyThree({ EffectComposer, RenderPass, GlitchPass });
 
 function Scene({ top, mouse }) {
-  const { size } = useThree();
-  const scrollMax = size.height * 4.5;
+  const { size } = useThree()
+  const scrollMax = size.height * 4.5
 
   return (
     <>
@@ -36,11 +36,11 @@ function Scene({ top, mouse }) {
         figaro
       </Text>*/}
     </>
-  );
+  )
 }
 
 const Intro = () => {
-  const [{ top, mouse }, set] = useSpring(() => ({ top: 0, mouse: [0, 0] }));
+  const [{ top, mouse }, set] = useSpring(() => ({ top: 0, mouse: [0, 0] }))
 
   return (
     <IntroWrapper>
@@ -48,7 +48,7 @@ const Intro = () => {
         <Scene top={top} mouse={mouse} />
       </Canvas>
     </IntroWrapper>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro

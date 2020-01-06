@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
-import shouldForwardProp from '@styled-system/should-forward-prop';
+import styled from '@emotion/styled'
+import shouldForwardProp from '@styled-system/should-forward-prop'
 import {
   flexbox,
   space,
@@ -7,32 +7,33 @@ import {
   border,
   typography,
   system,
+  color,
   SpaceProps,
   LayoutProps,
   FlexboxProps,
   TypographyProps,
-  BorderProps
-} from 'styled-system';
+  BorderProps,
+  ColorProps
+} from 'styled-system'
 
-const whiteSpace = system({
-  whiteSpace: true
-});
 export interface FlexProps
   extends FlexboxProps,
     LayoutProps,
     SpaceProps,
+    ColorProps,
     TypographyProps,
     BorderProps {
-  whiteSpace?: 'nowrap' | 'pre';
+  style?: React.CSSProperties
 }
 
 const Flex = styled('div', { shouldForwardProp })<FlexProps>`
   ${space}
-  ${flexbox}
+  ${color}
   ${layout}
   ${typography}
   ${border}
-  ${whiteSpace}
-`;
+  display: flex;
+  ${flexbox}
+`
 
-export default Flex;
+export default Flex

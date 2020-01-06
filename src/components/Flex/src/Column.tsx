@@ -1,15 +1,31 @@
-import React from 'react';
+import React from 'react'
 
-import Flex, { FlexProps } from './Flex';
+import Flex, { FlexProps } from './Flex'
 
 type ColumnProps = {
-  children?: React.ReactNode;
-} & FlexProps;
+  align?: 'flex-start' | 'flex-end' | 'center' | 'baseline'
+  justify?:
+    | 'flex-start'
+    | 'center'
+    | 'space-between'
+    | 'space-around'
+    | 'flex-end'
+  children?: React.ReactNode
+} & FlexProps
 
-const Column = (props: ColumnProps) => (
-  <Flex flexDirection="column" {...props}>
+const Column = ({
+  align = 'center',
+  justify = 'space-between',
+  ...props
+}: ColumnProps) => (
+  <Flex
+    flexDirection="column"
+    justifyContent={justify}
+    alignItems={align}
+    {...props}
+  >
     {props.children}
   </Flex>
-);
+)
 
-export default Column;
+export default Column

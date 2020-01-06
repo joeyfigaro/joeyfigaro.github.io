@@ -1,19 +1,21 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import { Helmet } from 'react-helmet';
+import React from 'react'
+import { Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
 
-import Hero from '../components/Hero';
-import Board from '../components/board';
-import IsometricBoard from '../components/isometric-board';
-import Layout from '../components/Layout';
-import Image from '../components/image';
-import Intro from '../components/Intro';
-// import SEO from '../components/seo';
+import Hero from '../components/Hero'
+import Board from '../components/board'
+import IsometricBoard from '../components/isometric-board'
+import Layout from '../components/Layout'
+import { Experience } from '../components/Sections'
+import Image from '../components/image'
+import Intro from '../components/Intro'
+import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout className="portfolio">
-    {/*<SEO title="Home" />*/}
+    <SEO title="The Portfolio of Joey Figaro" />
     <Hero />
+    <Experience />
     {/*<Intro /> */}
     {/*<div className="welcome">
       <h1>
@@ -30,6 +32,6 @@ const IndexPage = () => (
     </div>
   <IsometricBoard />*/}
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage

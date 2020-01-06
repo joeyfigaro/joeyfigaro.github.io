@@ -1,47 +1,58 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { space, typography, TypographyProps } from 'styled-system';
+import React from 'react'
+import styled from '@emotion/styled'
+import { system, typography, TypographyProps } from 'styled-system'
 
-import Button from '../../Button';
-import Intro from '../../Intro';
-import { Row } from '../../Flex';
+import Button from '../../Button'
+import mq from '../../../responsive'
+import { Row, Column } from '../../Flex'
 
-const HeroHeading = styled.h1<TypographyProps>`
-  ${typography}
-  letter-spacing: 1%;
-`;
+type WhitespaceValues = 'nowrap' | 'pre' | 'normal'
 
-const StarfieldWrapper = styled.div`
-  position: absolute;
-  height: 768px;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 0;
+const whiteSpace = system({
+  whiteSpace: true
+})
+
+const ResponsiveBreak = styled.br`
+  ${mq({
+    display: ['none', 'block', 'block'],
+    lineHeight: ['0', 'normal', 'normal']
+  })}
 `
 
-const ContentWrapper = styled.div`
-  position: relative;
-  z-index: 2;
+const HeroHeading = styled.h1<
+  TypographyProps & { whiteSpace?: WhitespaceValues | WhitespaceValues[] }
+>`
+  ${typography}
+  ${whiteSpace}
+  letter-spacing: 1%;
 `
 
 const Hero = () => (
-  <Row width={[3 / 4]} m="auto" whiteSpace="nowrap">
-    <ContentWrapper>
-      <HeroHeading fontSize={[24, 32, 56]} lineHeight={['32px', '44px', '68px']}>
-        I build engaging interfaces,
-        <br /> applications, & experiences
-      </HeroHeading>
-      <Row justify="flex-start" mt={[32, 32, 48]}>
-        <Button mr={16}>Download Resume</Button>
-        <Button>Hire Me</Button>
-      </Row>
-    </ContentWrapper>
-    <StarfieldWrapper>
-      <Intro />
-    </StarfieldWrapper>
-  </Row>
-);
+  <Column
+    align="flex-start"
+    justify="center"
+    width={[1, 1, 1082]}
+    px={[24, 32, 0]}
+    py={[50, 192]}
+    m="auto"
+  >
+    <HeroHeading fontSize={[24, 36, 56]} lineHeight={['32px', '52px', '68px']}>
+      I build engaging interfaces, <ResponsiveBreak /> applications, &
+      experiences
+    </HeroHeading>
+    <Row
+      justify="flex-start"
+      mt={[32, 32, 48]}
+      flexDirection={['column', 'row']}
+    >
+      <Button width={['100%', 'auto']} mr={[0, 0, 16]} mb={[2, 0, 0]}>
+        Download Resume
+      </Button>
+      <Button width={['100%', 'auto']}>Hire Me</Button>
+    </Row>
+  </Column>
+)
 
-export default Hero;
+Hero.displayName = 'Hero'
+
+export default Hero

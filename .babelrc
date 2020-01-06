@@ -1,5 +1,15 @@
 {
-  "plugins": ["emotion", "@babel/plugin-proposal-export-default-from"],
+  "plugins": [
+    [
+      "emotion",
+      {
+        "sourceMap": true,
+        "autoLabel": true,
+        "labelFormat": "[local]"
+      }
+    ],
+    "@babel/plugin-proposal-export-default-from"
+  ],
   "presets": [
     "@babel/preset-typescript",
     [

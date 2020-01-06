@@ -27,12 +27,12 @@ export interface FlexProps
 }
 
 const Flex = styled('div', { shouldForwardProp })<FlexProps>`
+  display: flex;
   ${space}
   ${color}
   ${layout}
   ${typography}
   ${border}
-  display: flex;
   ${flexbox}
 `
 

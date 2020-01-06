@@ -11,13 +11,13 @@ const ButtonBase = styled.button<ButtonProps>`
   ${space}
   ${layout}
   cursor: pointer;
-  padding: 8px 16px;
+  padding: 6px 16px 8px;
   background-color: transparent;
   color: #fefefe;
   font-weight: 500;
   font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
+  letter-spacing: -0.1px;
+  line-height: 12px;
   border: #fefefe solid 1px;
   border-radius: 24px;
 `

@@ -31,10 +31,37 @@ const Experience = () => (
     <Row
       justify="space-between"
       align="flex-start"
-      width={[3 / 4, 3 / 4, 1008]}
+      width="80%"
+      maxWidth={1000}
+      mb={24}
       flexDirection={['column', 'row']}
+      display={['flex', 'flex', 'none']}
     >
       <Column justify="flex-start" align="flex-start" mb={[32, 0]}>
+        <ColumnHeader fontSize={[13, 14]}>Proficiencies</ColumnHeader>
+        <Row pb={16}>
+          <UXBadge style={{ marginRight: 16 }} />
+          <UIBadge style={{ marginRight: 16 }} />
+          <JSBadge style={{ marginRight: 16 }} />
+          <CIBadge style={{ marginRight: 16 }} />
+          <CDBadge style={{ marginRight: 16 }} />
+        </Row>
+      </Column>
+    </Row>
+    <Row
+      justify="space-between"
+      align="flex-start"
+      width="80%"
+      maxWidth={1000}
+      minWidth="440"
+      flexDirection={['column', 'row']}
+    >
+      <Column
+        display={['none', 'none', 'flex']}
+        justify="flex-start"
+        align="flex-start"
+        mb={[32, 0]}
+      >
         <ColumnHeader fontSize={[13, 14]}>Proficiencies</ColumnHeader>
         <Row pb={16}>
           <UXBadge style={{ marginRight: 16 }} />
@@ -46,8 +73,8 @@ const Experience = () => (
           <CDBadge style={{ marginRight: 16 }} />
         </Row>
       </Column>
-      <Column align="flex-start" width={[1, '35%']} mb={[32, 0]}>
-        <ColumnHeader fontSize={[13, 14]}>Libraries & Tech</ColumnHeader>
+      <Column align="flex-start" width={[1, '35%']} mb={[32, 0]} minWidth={296}>
+        <ColumnHeader fontSize={[13, 14]}>Tools &amp; Providers</ColumnHeader>
         <Row align="flex-start" flexDirection={['column', 'row']}>
           <Column align="flex-start">
             <ListItem>React</ListItem>
@@ -60,6 +87,8 @@ const Experience = () => (
             <ListItem>Express</ListItem>
             <ListItem>Fastify</ListItem>
             <ListItem>Gatsby</ListItem>
+            <ListItem>AWS</ListItem>
+            <ListItem>Digital Ocean</ListItem>
           </Column>
           <Column align="flex-start" mb={[32, 0]}>
             <ListItem>Redux</ListItem>
@@ -70,15 +99,10 @@ const Experience = () => (
             <ListItem>Jest</ListItem>
             <ListItem>React Testing Library</ListItem>
             <ListItem>Tape</ListItem>
-          </Column>
-        </Row>
-      </Column>
-      <Column align="flex-start" mb={[32, 0]}>
-        <ColumnHeader fontSize={[13, 14]}>Platforms</ColumnHeader>
-        <Row>
-          <Column align="flex-start">
-            <ListItem>AWS</ListItem>
-            <ListItem>Digital Ocean</ListItem>
+            <ListItem>Figma</ListItem>
+            <ListItem>Sketch</ListItem>
+            <ListItem>Illustrator</ListItem>
+            <ListItem>Invision + Craft</ListItem>
           </Column>
         </Row>
       </Column>

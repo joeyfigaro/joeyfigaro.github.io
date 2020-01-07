@@ -5,7 +5,7 @@ import { Column } from '../../Flex'
 import mq from '../../../responsive'
 
 type SectionProps = {
-  maxWidth: number
+  maxWidth?: number
   children: React.ReactNode
 }
 

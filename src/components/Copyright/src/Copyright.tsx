@@ -4,12 +4,12 @@ import mq from '../../../responsive'
 import styled from '../../../theme'
 import { Column, Row } from '../../Flex'
 
-const CopyrightContainer = styled(p => <Column {...p}>{p.children}</Column>)`
+const CopyrightPrimitive = styled(p => <Column {...p}>{p.children}</Column>)`
   white-space: nowrap;
-  height: 93px;
-  padding: 24px;
-  border-top: #1e1e1e solid 1px;
-  background-color: #0c0c0c;
+  width: 100%;
+  height: 92px;
+  padding: 32px 0;
+  background-color: #080808;
   letter-spacing: 0.4px;
 `
 
@@ -35,7 +35,7 @@ const PromptOutput = styled.span`
 `
 
 const Copyright = () => (
-  <CopyrightContainer align="center" justify="center">
+  <CopyrightPrimitive align="center" justify="center">
     <Column width={[1, 1082]} align="flex-start">
       <Row mb={1} justify="flex-start">
         <Prompt>$ figs@mblocal ></Prompt>
@@ -43,7 +43,9 @@ const Copyright = () => (
       </Row>
       <PromptOutput>Joey Figaro © 2019, All Rights Reserved</PromptOutput>
     </Column>
-  </CopyrightContainer>
+  </CopyrightPrimitive>
 )
+
+Copyright.displayName = 'Copyright'
 
 export default Copyright

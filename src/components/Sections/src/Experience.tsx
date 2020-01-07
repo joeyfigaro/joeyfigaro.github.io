@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import { typography, space } from 'styled-system'
 
 import JSBadge from '../../../images/badges/JS.svg'
@@ -7,7 +8,7 @@ import UIBadge from '../../../images/badges/UI.svg'
 import CIBadge from '../../../images/badges/CI.svg'
 import CDBadge from '../../../images/badges/CD.svg'
 
-import styled from '../../../theme'
+// import styled from '../../../theme'
 import { Row, Column } from '../../Flex'
 import Divider from '../../Divider'
 

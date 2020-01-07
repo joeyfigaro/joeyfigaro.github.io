@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { motion } from 'framer-motion'
 
 import { Column } from '../../Flex'
 import mq from '../../../responsive'
@@ -20,9 +21,11 @@ const SectionPrimitive = styled(Column)<SectionProps>`
 
 const Section = (props: any) => {
   return (
-    <SectionPrimitive width={3 / 4} align="center" {...props}>
-      {props.children}
-    </SectionPrimitive>
+    <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
+      <SectionPrimitive width={3 / 4} align="center" {...props}>
+        {props.children}
+      </SectionPrimitive>
+    </motion.div>
   )
 }
 

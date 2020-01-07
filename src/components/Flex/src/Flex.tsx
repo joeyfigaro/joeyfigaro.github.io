@@ -1,6 +1,5 @@
 import { forwardRef } from 'react'
 import styled from '@emotion/styled'
-import { motion } from 'framer-motion'
 import shouldForwardProp from '@styled-system/should-forward-prop'
 import {
   flexbox,
@@ -8,7 +7,6 @@ import {
   layout,
   border,
   typography,
-  system,
   color,
   SpaceProps,
   LayoutProps,
@@ -29,7 +27,7 @@ export interface FlexProps
   ref?: React.Ref<HTMLElement>
 }
 
-const Flex = styled(motion.div, { shouldForwardProp })<FlexProps>`
+const Flex = styled('div', { shouldForwardProp })<FlexProps>`
   display: flex;
   ${space}
   ${color}
@@ -39,8 +37,10 @@ const Flex = styled(motion.div, { shouldForwardProp })<FlexProps>`
   ${flexbox}
 `
 
-export default forwardRef((props, ref) => (
-  <Flex {...props} ref={ref}>
-    {props.children}
-  </Flex>
-))
+export default forwardRef((props, ref) => {
+  return (
+    <Flex {...props} ref={ref}>
+      {props.children}
+    </Flex>
+  )
+})

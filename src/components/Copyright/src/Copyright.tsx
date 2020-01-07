@@ -36,7 +36,7 @@ const PromptOutput = styled.span`
 
 const Copyright = () => (
   <CopyrightPrimitive align="center" justify="center">
-    <Column width={[1, 1082]} align="flex-start">
+    <Column width={[1, '85%']} maxWidth={1200} align="flex-start">
       <Row mb={1} justify="flex-start">
         <Prompt>$ figs@mblocal ></Prompt>
         <PromptValue>copyright</PromptValue>

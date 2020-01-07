@@ -11,11 +11,11 @@ type SectionProps = {
 }
 
 const SectionPrimitive = styled(Column)<SectionProps>`
-  ${p =>
+  ${({ maxWidth }) =>
     mq({
       transition: 'all 0.25s ease-out',
       paddingBottom: [56, 56, 112],
-      width: ['100%', '100%', p.maxWidth]
+      width: ['100%', '100%', maxWidth]
     })};
 `
 

@@ -1,14 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext
-} from 'pure-react-carousel'
-import 'pure-react-carousel/dist/react-carousel.es.css'
 
 import ArrowLeft from '../../../images/arrow-left.svg'
 import ArrowRight from '../../../images/arrow-right.svg'
@@ -18,58 +10,104 @@ import Divider from '../../Divider'
 import Section from './Section'
 
 const TestimonialSlide = styled(Column)`
+  width: 100%;
   height: 184px;
   margin-bottom: 96px;
 `
 
+const IconButton = styled.button`
+  appearance: none;
+  background-color: transparent;
+  border: none;
+`
+
 const Quote = styled.h2`
   font-size: 36px;
-  line-height: 44px;
+  line-height: 48px;
   font-weight: 200;
 `
 
-const slider = css`
-  width: 85%;
-  max-width: 1085px;
+const Text = styled.p`
+  margin-bottom: 0;
 `
 
-const Testimonials = () => (
-  <Section>
-    <Divider>Testimonials</Divider>
-    <CarouselProvider
-      touchEnabled
-      css={slider}
-      naturalSlideWidth={1085}
-      naturalSlideHeight={184}
-      totalSlides={2}
-    >
-      <Slider>
-        <Slide index={0}>
-          <Quote>
-            User-focused with laser precision, Joey asks the right questions
-            to polish a product. I don’t think I know anyone who has put more
-            effort into developing their skillset than Joey and it shows; I work
-            with him every opportunity I get.
-          </Quote>
-        </Slide>
-        <Slide index={0}>
-          <Quote>
-            User-focused with laser precision, Joey asks the right questions
-            to polish a product. I don’t think I know anyone who has put more
-            effort into developing their skillset than Joey and it shows; I work
-            with him every opportunity I get.
-          </Quote>
-        </Slide>
-        <ButtonBack>
-          <ArrowLeft />
-        </ButtonBack>
-        <ButtonNext>
-          <ArrowRight />
-        </ButtonNext>
-      </Slider>
-    </CarouselProvider>
-  </Section>
-)
+const Strong = styled(Text)`
+  font-weight: 800;
+`
+
+const Separator = styled(Text)`
+  padding: 0 8px;
+`
+
+// const slider = css`
+//   width: 80%;
+//   max-width: 1000px;
+// `
+const quotes = [
+  {
+    id: 1,
+    text:
+      '“I don’t think I know anyone who has put more effort into developing their skillset than Joey and it shows; I work with him every opportunity I get.”',
+    author: 'Giuseppe Mancone',
+    title: 'Software Development Engineer II',
+    company: 'Amazon'
+  },
+  {
+    id: 2,
+    text: 'I like blimps',
+    author: 'Meesa Massa',
+    title: 'Expert Demolitionist IV',
+    company: 'Explody Inc.'
+  }
+]
+
+const Testimonials = () => {
+  const [currentTestimonial, setCurrentTestimonial] = React.useState<number>(0)
+  return (
+    <Section>
+      <Divider>Testimonials</Divider>
+      <Column
+        justify="space-between"
+        align="flex-start"
+        width="80%"
+        maxWidth={1000}
+      >
+        <TestimonialSlide>
+          <Quote>{quotes[currentTestimonial].text}</Quote>
+        </TestimonialSlide>
+        <Row justify="flex-start">
+          <Row justify="space-between" width={56}>
+            <Strong>0{quotes[currentTestimonial].id}</Strong>
+            <Separator>/</Separator>
+            <Text>0{quotes.length}</Text>
+          </Row>
+          <Row flex={3} justify="flex-start" px={32}>
+            <Strong>{quotes[currentTestimonial].author}</Strong>
+            <Separator>/</Separator>
+            <Text>
+              {quotes[currentTestimonial].title} @{' '}
+              {quotes[currentTestimonial].company}
+            </Text>
+          </Row>
+          <Row justify="space-between" width={56}>
+            <IconButton
+              onClick={() => setCurrentTestimonial(currentTestimonial - 1)}
+              disabled={currentTestimonial === 0}
+            >
+              <ArrowLeft />
+            </IconButton>
+            <IconButton
+              onClick={() => setCurrentTestimonial(currentTestimonial + 1)}
+              disabled={currentTestimonial === quotes.length - 1}
+            >
+              <ArrowRight />
+            </IconButton>
+          </Row>
+        </Row>
+      </Column>
+    </Section>
+  )
+}
 
 Testimonials.displayName = 'Testimonials'
 

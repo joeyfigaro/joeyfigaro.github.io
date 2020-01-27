@@ -15,7 +15,7 @@ const TestimonialSlide = styled(Column)`
   margin-bottom: 96px;
 `
 
-const IconButton = styled.button`
+const IconButton = styled.button((props: { icon: React.ReactNode }) => )`
   appearance: none;
   background-color: transparent;
   border: none;

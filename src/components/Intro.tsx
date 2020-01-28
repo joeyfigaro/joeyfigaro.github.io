@@ -1,17 +1,16 @@
 import React from 'react'
 import { useThree, Canvas, extend } from 'react-three-fiber'
 import { a, useSpring, apply as applySpring } from 'react-spring/three'
-import styled from '@emotion/styled'
 
 import Stars from './Generative/Stars'
 import Effects from './Generative/Effects'
 import Text from './Generative/Text'
 // import SplatterPaint from './Generative/SplatterPaint';
 
-const IntroWrapper = styled.div`
-  // width: 100vw;
-  // height: 100vh;
-`
+// const IntroWrapper = styled.div`
+//   // width: 100vw;
+//   // height: 100vh;
+// `
 
 // applyThree({ EffectComposer, RenderPass, GlitchPass });
 

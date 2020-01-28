@@ -8,7 +8,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
-import { ThemeProvider } from 'emotion-theming'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { theme } from '../theme'
@@ -37,12 +36,10 @@ const Layout = ({
 
   /* className="grt" */
   return (
-    <ThemeProvider theme={theme}>
-      <div className="portfolio">
-        <main>{children}</main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="portfolio">
+      <main>{children}</main>
+      <Footer />
+    </div>
   )
 }
 

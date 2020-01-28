@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from '@emotion/styled'
 import { motion } from 'framer-motion'
 
 import { Column } from '../../Flex'
@@ -23,7 +22,6 @@ const Section = (props: any) => {
   return (
     <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
       <Column
-        width={3 / 4}
         maxWidth={1000}
         m="auto"
         minHeight={718}

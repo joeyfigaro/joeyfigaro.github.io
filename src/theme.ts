@@ -1,4 +1,4 @@
-import styled, { CreateStyled } from '@emotion/styled'
+// import styled, { CreateStyled } from '@emotion/styled'
 
 type Theme = {
   fontWeights: number[]
@@ -32,4 +32,4 @@ export const theme = {
   }
 }
 
-export default styled as CreateStyled<Theme>
+// export default styled as CreateStyled<Theme>

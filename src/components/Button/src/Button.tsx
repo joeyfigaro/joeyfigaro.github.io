@@ -1,6 +1,4 @@
 import React from 'react'
-import styled from '@emotion/styled'
-import { layout, space, SpaceProps } from 'styled-system'
 import cx from 'classnames'
 
 import styles from '../styles.module.scss'
@@ -10,12 +8,12 @@ type ButtonProps = {
   className?: string | string[]
   onClick: (e: any) => void
   children: string
-} & SpaceProps
+}
 
-const ButtonBase = styled.button<ButtonProps>`
-  ${space}
-  ${layout}
-`
+// const ButtonBase = styled.button<ButtonProps>`
+//   ${space}
+//   ${layout}
+// `
 
 const Button = ({
   onClick = () => console.log('clicked'),
@@ -23,14 +21,14 @@ const Button = ({
   children,
   ...props
 }: ButtonProps) => (
-  <ButtonBase
+  <button
     className={cx(styles.Button, styles[variant])}
     onClick={onClick}
     type="button"
     {...props}
   >
     {children}
-  </ButtonBase>
+  </button>
 )
 
 export default Button

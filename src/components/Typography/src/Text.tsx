@@ -1,11 +1,9 @@
 import React from 'react'
-import styled from '@emotion/styled'
-import { typography, color, space } from 'styled-system'
 
-const Text = styled.p`
-  ${typography}
-  ${color}
-  ${space}
-`
+const Text = (props: { children: React.ReactNode }) => {
+  return <p {...props}>{props.children}</p>
+}
+
+Text.displayName = 'Text'
 
 export default Text

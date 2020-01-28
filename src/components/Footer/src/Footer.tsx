@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from '@emotion/styled'
 
 import Plane from '../../../images/icons/plane.svg'
 import Dribbble from '../../../images/social/Icon/dribbble.svg'
@@ -65,12 +64,10 @@ const Footer = (p: any): JSX.Element => {
             </Row>
           </Row>
         </Row>
-        <Column width={1 / 3}>
+        <Column>
           <Button onClick={() => {}}>Download Resume</Button>
         </Column>
-        <Column width={1 / 3} align="flex-end">
-          &copy; 2019 Joey Figaro
-        </Column>
+        <Column align="flex-end">&copy; 2019 Joey Figaro</Column>
       </Row>
     </footer>
   )

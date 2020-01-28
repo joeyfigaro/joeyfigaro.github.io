@@ -8,7 +8,7 @@ import UIBadge from '../../../images/badges/UI.svg'
 import CIBadge from '../../../images/badges/CI.svg'
 import CDBadge from '../../../images/badges/CD.svg'
 
-// import styled from '../../../theme'
+import { Heading, Subheading } from '../../Typography'
 import { Row, Column } from '../../Flex'
 import Divider from '../../Divider'
 
@@ -26,96 +26,69 @@ const ListItem = styled.p(typography, space, {
 })
 const Link = ListItem.withComponent('a')
 
+const List = styled.ul`
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+`
+
 const Experience = () => (
-  <Section>
-    <Divider>Experience</Divider>
-    <Row
-      justify="space-between"
-      align="flex-start"
-      width="80%"
-      maxWidth={1000}
-      mb={24}
-      flexDirection={['column', 'row']}
-      display={['flex', 'flex', 'none']}
-    >
-      <Column justify="flex-start" align="flex-start" mb={[32, 0]}>
-        <ColumnHeader fontSize={[13, 14]}>Proficiencies</ColumnHeader>
-        <Row pb={16}>
-          <UXBadge style={{ marginRight: 16 }} />
-          <UIBadge style={{ marginRight: 16 }} />
-          <JSBadge style={{ marginRight: 16 }} />
-          <CIBadge style={{ marginRight: 16 }} />
-          <CDBadge style={{ marginRight: 16 }} />
-        </Row>
-      </Column>
-    </Row>
-    <Row
-      justify="space-between"
-      align="flex-start"
-      width="80%"
-      maxWidth={1000}
-      minWidth="440"
-      flexDirection={['column', 'row']}
-    >
-      <Column
-        display={['none', 'none', 'flex']}
-        justify="flex-start"
-        align="flex-start"
-        mb={[32, 0]}
-      >
-        <ColumnHeader fontSize={[13, 14]}>Proficiencies</ColumnHeader>
-        <Row pb={16}>
-          <UXBadge style={{ marginRight: 16 }} />
-          <UIBadge style={{ marginRight: 16 }} />
-          <JSBadge />
-        </Row>
-        <Row justify="flex-start">
-          <CIBadge style={{ marginRight: 16 }} />
-          <CDBadge style={{ marginRight: 16 }} />
-        </Row>
-      </Column>
-      <Column align="flex-start" width={[1, '35%']} mb={[32, 0]} minWidth={296}>
-        <ColumnHeader fontSize={[13, 14]}>Tools &amp; Providers</ColumnHeader>
-        <Row align="flex-start" flexDirection={['column', 'row']}>
-          <Column align="flex-start">
-            <ListItem>React</ListItem>
-            <ListItem>React Native</ListItem>
-            <ListItem>GraphQL</ListItem>
-            <ListItem>Node</ListItem>
-            <ListItem>Postgres</ListItem>
-            <ListItem>Mongo</ListItem>
-            <ListItem>Knex/Mongoose</ListItem>
-            <ListItem>Express</ListItem>
-            <ListItem>Fastify</ListItem>
-            <ListItem>Gatsby</ListItem>
-            <ListItem>AWS</ListItem>
-            <ListItem>Digital Ocean</ListItem>
-          </Column>
-          <Column align="flex-start" mb={[32, 0]}>
-            <ListItem>Redux</ListItem>
-            <ListItem>Overmind</ListItem>
-            <ListItem>Redux Saga</ListItem>
-            <ListItem>Redux Thunk</ListItem>
-            <ListItem>Redis</ListItem>
-            <ListItem>Jest</ListItem>
-            <ListItem>React Testing Library</ListItem>
-            <ListItem>Tape</ListItem>
-            <ListItem>Figma</ListItem>
-            <ListItem>Sketch</ListItem>
-            <ListItem>Illustrator</ListItem>
-            <ListItem>Invision + Craft</ListItem>
-          </Column>
-        </Row>
-      </Column>
-      <Column align="flex-start" mb={[32, 0]}>
-        <ColumnHeader fontSize={[13, 14]}>Previous Companies</ColumnHeader>
+  <Section width={1000} m="auto" align="flex-start">
+    <header>
+      <Heading>
+        Skills &amp;
+        <br /> Proficiencies
+      </Heading>
+    </header>
+    <Row width={667} align="flex-start" justify="flex-start">
+      <Column width={3 / 4} align="flex-start">
+        <Subheading as="h3">00.</Subheading>
+        <Subheading as="h2" style={{ marginBottom: '32px', marginTop: '24px' }}>
+          General
+        </Subheading>
         <Row>
-          <Column align="flex-start">
-            <Link href="https://measure.com">Measure</Link>
-            <Link href="https://painless1099.com">Painless1099</Link>
-            <Link href="https://mobelux.com">Mobelux</Link>
-            <Link href="https://macrumors.com">MacRumors</Link>
-            <Link href="https://capitalone.com">Capital One</Link>
+          <Column flex={1} align="flex-start">
+            <List>
+              <li>Typescript</li>
+              <li>Reactotron</li>
+              <li>Husky</li>
+              <li>Commitlint</li>
+              <li>Webpack</li>
+              <li>Rollup</li>
+              <li>CRA</li>
+              <li>Github/Git</li>
+              <li>zsh</li>
+            </List>
+          </Column>
+          <Column flex={1} align="flex-start">
+            <List>
+              <li>Figma</li>
+              <li>Illustrator</li>
+              <li>Sketch</li>
+              <li>Zeplin</li>
+              <li>Craft/Invision</li>
+              <li>Storybook</li>
+            </List>
+          </Column>
+        </Row>
+      </Column>
+      <Column width={1 / 4} align="flex-start">
+        <Subheading as="h3">01.</Subheading>
+        <Subheading as="h2" style={{ marginBottom: '32px', marginTop: '24px' }}>
+          Roles
+        </Subheading>
+        <Row>
+          <Column flex={1} align="flex-start">
+            <List>
+              <li>Web Designer</li>
+              <li>UI Developer</li>
+              <li>Web Developer</li>
+              <li>Senior Web Developer</li>
+              <li>Lead React Developer</li>
+            </List>
           </Column>
         </Row>
       </Column>

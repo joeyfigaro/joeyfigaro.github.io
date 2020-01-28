@@ -10,26 +10,33 @@ type SectionProps = {
   children: React.ReactNode
 }
 
-const SectionPrimitive = styled(Column)<SectionProps>`
-  ${({ maxWidth }) =>
-    mq({
-      transition: 'all 0.25s ease-out',
-      paddingBottom: [56, 56, 112],
-      width: ['100%', '100%', maxWidth]
-    })};
-`
+// const SectionPrimitive = styled(Column)<SectionProps>`
+//   ${({ maxWidth }) =>
+//     mq({
+//       transition: 'all 0.25s ease-out',
+//       paddingBottom: [56, 56, 112],
+//       width: ['100%', '100%', maxWidth]
+//     })};
+// `
 
 const Section = (props: any) => {
   return (
     <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-      <SectionPrimitive width={3 / 4} align="center" {...props}>
+      <Column
+        width={3 / 4}
+        maxWidth={1000}
+        m="auto"
+        minHeight={718}
+        align="center"
+        {...props}
+      >
         {props.children}
-      </SectionPrimitive>
+      </Column>
     </motion.div>
   )
 }
 
-SectionPrimitive.displayName = 'SectionPrimitive'
+// Section.displayName = 'SectionPrimitive'
 Section.displayName = 'Section'
 
 export default Section

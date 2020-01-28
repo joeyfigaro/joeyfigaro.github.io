@@ -1,0 +1,15 @@
+.Footer {
+  padding: 24px 40px;
+  background-color: #0c0c0c;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .icon {
+    margin-right: 16px;
+    display: flex;
+    height: 20px;
+    width: 20px;
+  }
+}

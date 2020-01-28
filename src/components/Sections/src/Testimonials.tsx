@@ -15,11 +15,11 @@ const TestimonialSlide = styled(Column)`
   margin-bottom: 96px;
 `
 
-const IconButton = styled.button((props: { icon: React.ReactNode }) => )`
-  appearance: none;
-  background-color: transparent;
-  border: none;
-`
+// const IconButton = styled.button((props: { icon: React.ReactNode }) => )`
+//   appearance: none;
+//   background-color: transparent;
+//   border: none;
+// `
 
 const Quote = styled.h2`
   font-size: 36px;
@@ -90,7 +90,7 @@ const Testimonials = () => {
             </Text>
           </Row>
           <Row justify="space-between" width={56}>
-            <IconButton
+            {/**<IconButton
               onClick={() => setCurrentTestimonial(currentTestimonial - 1)}
               disabled={currentTestimonial === 0}
             >
@@ -101,7 +101,7 @@ const Testimonials = () => {
               disabled={currentTestimonial === quotes.length - 1}
             >
               <ArrowRight />
-            </IconButton>
+            </IconButton>**/}
           </Row>
         </Row>
       </Column>

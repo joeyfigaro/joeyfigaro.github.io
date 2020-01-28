@@ -1,8 +1,10 @@
 import React from 'react'
 
-import Flex, { FlexProps } from './Flex'
+import Flex from './Flex'
 
 type RowProps = {
+  width?: string | number
+  className?: string
   align?: 'flex-start' | 'flex-end' | 'center' | 'baseline'
   justify?:
     | 'flex-start'
@@ -11,7 +13,7 @@ type RowProps = {
     | 'space-around'
     | 'flex-end'
   children: React.ReactNode
-} & FlexProps
+} & React.Props<typeof Flex>
 
 const Row = ({
   width = '100%',
@@ -20,7 +22,13 @@ const Row = ({
   children,
   ...props
 }: RowProps) => (
-  <Flex width={width} alignItems={align} justifyContent={justify} {...props}>
+  <Flex
+    className={props.className}
+    width={width}
+    alignItems={align}
+    justifyContent={justify}
+    {...props}
+  >
     {children}
   </Flex>
 )

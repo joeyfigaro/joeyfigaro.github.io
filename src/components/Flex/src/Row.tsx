@@ -1,6 +1,7 @@
 import React from 'react'
+import cx from 'classnames'
 
-import Flex from './Flex'
+import styles from '../styles.module.scss'
 
 type RowProps = {
   width?: string | number
@@ -13,24 +14,15 @@ type RowProps = {
     | 'space-around'
     | 'flex-end'
   children: React.ReactNode
-} & React.Props<typeof Flex>
+}
 
 const Row = ({
-  width = '100%',
   align = 'center',
   justify = 'space-between',
   children,
   ...props
 }: RowProps) => (
-  <Flex
-    className={props.className}
-    width={width}
-    alignItems={align}
-    justifyContent={justify}
-    {...props}
-  >
-    {children}
-  </Flex>
+  <div className={cx(styles.flex, styles.Row, props.className)}>{children}</div>
 )
 
 export default Row

@@ -6,12 +6,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-svg',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: './src/typography.ts'
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-typography',
+    //   options: {
+    //     pathToConfigModule: './src/typography.ts'
+    //   }
+    // },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -36,19 +36,19 @@ module.exports = {
       }
     },
     `gatsby-plugin-typescript`,
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        stats: false,
-        format: ['woff', 'woff2'],
-        fonts: [
-          {
-            family: 'Ovo',
-            variants: [`400`, `600`, `800`]
-          }
-        ]
-      }
-    }
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     stats: false,
+    //     format: ['woff', 'woff2'],
+    //     fonts: [
+    //       {
+    //         family: 'Ovo',
+    //         variants: [`400`, `600`, `800`]
+    //       }
+    //     ]
+    //   }
+    // }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

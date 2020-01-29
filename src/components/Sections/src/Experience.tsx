@@ -11,64 +11,143 @@ import { Row, Column } from '../../Flex'
 
 import Section from './Section'
 
+import styles from '../styles.module.scss'
+
 const Experience = () => (
-  <Section width={1000} m="auto" align="flex-start">
+  <Section horizontal className={styles.Experience}>
     <header>
       <Heading>
         Skills &amp;
         <br /> Proficiencies
       </Heading>
     </header>
-    <Row width={667} align="flex-start" justify="flex-start">
-      <Column align="flex-start">
-        <Subheading as="h3">00.</Subheading>
-        <Subheading as="h2" style={{ marginBottom: '32px', marginTop: '24px' }}>
-          General
-        </Subheading>
-        <Row>
-          <Column align="flex-start">
-            <ul>
-              <li>Typescript</li>
-              <li>Reactotron</li>
-              <li>Husky</li>
-              <li>Commitlint</li>
-              <li>Webpack</li>
-              <li>Rollup</li>
-              <li>CRA</li>
-              <li>Github/Git</li>
-              <li>zsh</li>
-            </ul>
-          </Column>
-          <Column align="flex-start">
-            <ul>
-              <li>Figma</li>
-              <li>Illustrator</li>
-              <li>Sketch</li>
-              <li>Zeplin</li>
-              <li>Craft/Invision</li>
-              <li>Storybook</li>
-            </ul>
-          </Column>
-        </Row>
-      </Column>
-      <Column align="flex-start">
-        <Subheading as="h3">01.</Subheading>
-        <Subheading as="h2" style={{ marginBottom: '32px', marginTop: '24px' }}>
-          Roles
-        </Subheading>
-        <Row>
-          <Column align="flex-start">
-            <ul>
-              <li>Web Designer</li>
-              <li>UI Developer</li>
-              <li>Web Developer</li>
-              <li>Senior Web Developer</li>
-              <li>Lead React Developer</li>
-            </ul>
-          </Column>
-        </Row>
-      </Column>
-    </Row>
+    <Column className={styles.content}>
+      <Row className={styles.contentRow}>
+        <Column className={styles.column} align="flex-start">
+          <Subheading subtle as="h3">
+            00.
+          </Subheading>
+          <Subheading
+            as="h2"
+            style={{ marginBottom: '32px', marginTop: '24px' }}
+          >
+            General
+          </Subheading>
+          <Row className={styles.general}>
+            <Column className={styles.halfWidth}>
+              <ul className={styles.list}>
+                <li>Typescript</li>
+                <li>Reactotron</li>
+                <li>Husky</li>
+                <li>Commitlint</li>
+                <li>Webpack</li>
+                <li>Rollup</li>
+                <li>CRA</li>
+                <li>Github/Git</li>
+                <li>zsh</li>
+              </ul>
+            </Column>
+            <Column className={styles.halfWidth}>
+              <ul className={styles.list}>
+                <li>Figma</li>
+                <li>Illustrator</li>
+                <li>Sketch</li>
+                <li>Zeplin</li>
+                <li>Craft/Invision</li>
+                <li>Storybook</li>
+              </ul>
+            </Column>
+          </Row>
+        </Column>
+        <Column align="flex-start">
+          <Subheading subtle as="h3">
+            01.
+          </Subheading>
+          <Subheading
+            as="h2"
+            style={{ marginBottom: '32px', marginTop: '24px' }}
+          >
+            Roles
+          </Subheading>
+          <Row>
+            <Column align="flex-start">
+              <ul className={styles.list}>
+                <li>Web Designer</li>
+                <li>UI Developer</li>
+                <li>Web Developer</li>
+                <li>Senior Web Developer</li>
+                <li>Lead React Developer</li>
+              </ul>
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+      <Row className={styles.contentRow}>
+        <Column className={styles.column} align="flex-start">
+          <Subheading subtle as="h3">
+            02.
+          </Subheading>
+          <Subheading
+            as="h2"
+            style={{ marginBottom: '32px', marginTop: '24px' }}
+          >
+            User Interface
+          </Subheading>
+          <Row>
+            <Column>
+              <ul className={styles.list}>
+                <li>React</li>
+                <li>Sass</li>
+                <li>Emotion</li>
+                <li>Styled-Components</li>
+                <li>CSS Modules</li>
+              </ul>
+            </Column>
+          </Row>
+        </Column>
+        <Column className={styles.column} align="flex-start">
+          <Subheading subtle as="h3">
+            03.
+          </Subheading>
+          <Subheading
+            as="h2"
+            style={{ marginBottom: '32px', marginTop: '24px' }}
+          >
+            State Management
+          </Subheading>
+          <Row>
+            <Column align="flex-start">
+              <ul className={styles.list}>
+                <li>Overmind</li>
+                <li>Redux</li>
+                <li>Context</li>
+                <li>Reselect</li>
+              </ul>
+            </Column>
+          </Row>
+        </Column>
+        <Column align="flex-start">
+          <Subheading subtle as="h3">
+            04.
+          </Subheading>
+          <Subheading
+            as="h2"
+            style={{ marginBottom: '32px', marginTop: '24px' }}
+          >
+            Side Effects
+          </Subheading>
+          <Row>
+            <Column align="flex-start">
+              <ul className={styles.list}>
+                <li>Redux-Saga</li>
+                <li>Redux-Thunk</li>
+                <li>Overmind</li>
+              </ul>
+            </Column>
+          </Row>
+        </Column>
+      </Row>
+    </Column>
   </Section>
 )
 

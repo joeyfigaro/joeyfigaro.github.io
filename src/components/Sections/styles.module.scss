@@ -1,0 +1,95 @@
+.Section {
+  display: flex;
+  max-width: 100%;
+  padding: 0 24px;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+
+  .horizontal {
+    flex-direction: row;
+  }
+
+  .column {
+    margin-bottom: 24px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .contentRow {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 767px) {
+    flex-direction: row;
+    padding: 0;
+
+    .column {
+      margin-bottom: 0;
+    }
+
+    .content {
+      margin-left: auto;
+      width: calc(100% - 331px);
+    }
+
+    .contentRow {
+      flex-direction: row;
+      margin-bottom: 80px;
+    }
+  }
+
+  @media screen and (min-width: 1023px) {
+    max-width: 1000px;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Projects {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+
+  @media screen and (min-width: 767px) {
+    & {
+      max-height: 200px;
+      margin-bottom: 214px;
+    }
+
+    .projectColumn {
+      width: 290px;
+    }
+  }
+}
+
+.Experience {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+
+  .general {
+    min-width: 360px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .halfWidth {
+    width: 50%;
+  }
+
+  @media screen and (min-width: 767px) {
+    & {
+      margin-bottom: 214px;
+    }
+  }
+}

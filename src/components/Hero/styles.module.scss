@@ -1,0 +1,18 @@
+.Hero {
+  height: 100vh;
+  align-items: flex-start;
+
+  @media screen and (min-width: 767px) {
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.Heading {
+  justify-self: flex-start;
+  width: 80%;
+
+  @media screen and (min-width: 767px) {
+    max-width: 665px;
+  }
+}

@@ -1,40 +1,34 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import cx from 'classnames'
 
-import { Column } from '../../Flex'
-import mq from '../../../responsive'
+import styles from '../styles.module.scss'
 
 type SectionProps = {
   maxWidth?: number
+  horizontal?: boolean
   children: React.ReactNode
+  className?: string
 }
 
-// const SectionPrimitive = styled(Column)<SectionProps>`
-//   ${({ maxWidth }) =>
-//     mq({
-//       transition: 'all 0.25s ease-out',
-//       paddingBottom: [56, 56, 112],
-//       width: ['100%', '100%', maxWidth]
-//     })};
-// `
-
-const Section = (props: any) => {
+const Section = ({ horizontal = false, children, ...props }: SectionProps) => {
   return (
-    <motion.div animate={{ opacity: 1 }} initial={{ opacity: 0 }}>
-      <Column
-        maxWidth={1000}
-        m="auto"
-        minHeight={718}
-        align="center"
-        {...props}
-      >
-        {props.children}
-      </Column>
-    </motion.div>
+    <motion.section
+      className={cx(
+        styles.Section,
+        {
+          [styles.horizontal]: horizontal
+        },
+        props.className
+      )}
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+    >
+      {children}
+    </motion.section>
   )
 }
 
-// Section.displayName = 'SectionPrimitive'
 Section.displayName = 'Section'
 
 export default Section

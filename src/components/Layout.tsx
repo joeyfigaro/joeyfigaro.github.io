@@ -6,7 +6,7 @@
  */
 
 import React from 'react'
-import PropTypes from 'prop-types'
+import { IconContext } from 'react-icons'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
@@ -14,9 +14,8 @@ import { theme } from '../theme'
 // import Header from './header'
 import Footer from './Footer'
 
-// import '../styles/typography.scss';
+import '../styles/typography.scss'
 import '../styles/layout.scss'
-import '../styles/portfolio.scss'
 
 const Layout = ({
   children
@@ -36,10 +35,14 @@ const Layout = ({
 
   /* className="grt" */
   return (
-    <div className="portfolio">
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <IconContext.Provider
+      value={{ color: 'white', style: { width: 21, height: 21 } }}
+    >
+      <div className="portfolio">
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </IconContext.Provider>
   )
 }
 

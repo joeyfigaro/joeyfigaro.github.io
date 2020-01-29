@@ -1,9 +1,11 @@
 import React from 'react'
+import cx from 'classnames'
 
-import Flex, { FlexProps } from './Flex'
+import styles from '../styles.module.scss'
 
 type ColumnProps = {
   align?: 'flex-start' | 'flex-end' | 'center' | 'baseline'
+  className?: string
   justify?:
     | 'flex-start'
     | 'center'
@@ -11,21 +13,18 @@ type ColumnProps = {
     | 'space-around'
     | 'flex-end'
   children?: React.ReactNode
-} & FlexProps
+}
 
 const Column = ({
   align = 'center',
   justify = 'space-between',
+  className,
+  children,
   ...props
 }: ColumnProps) => (
-  <Flex
-    flexDirection="column"
-    justifyContent={justify}
-    alignItems={align}
-    {...props}
-  >
-    {props.children}
-  </Flex>
+  <div className={cx(styles.flex, styles.Column, className)} {...props}>
+    {children}
+  </div>
 )
 
 export default Column

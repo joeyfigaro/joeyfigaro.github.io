@@ -1,9 +1,10 @@
 html {
   // font-family: 'Cartograph CF', monospace;
-  // -ms-text-size-adjust: 100%;
-  // -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 body {
+  overflow-x: hidden;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -110,9 +111,9 @@ textarea {
   font: inherit;
   margin: 0;
 }
-optgroup {
-  font-weight: 700;
-}
+// optgroup {
+//   font-weight: 700;
+// }
 button,
 input {
   overflow: visible;
@@ -199,7 +200,7 @@ body {
   color: hsla(255, 255%, 255%, 0.98);
   background-color: #0c0c0c;
   // font-family: 'Cartograph CF', monospace;
-  font-weight: normal;
+  // font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';

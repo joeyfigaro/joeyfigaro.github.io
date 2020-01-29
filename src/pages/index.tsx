@@ -3,12 +3,8 @@ import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
 import Hero from '../components/Hero'
-import Board from '../components/board'
-import IsometricBoard from '../components/isometric-board'
 import Layout from '../components/Layout'
-import { Experience, Testimonials } from '../components/Sections'
-import Image from '../components/image'
-import Intro from '../components/Intro'
+import { Experience, Testimonials, Projects } from '../components/Sections'
 import SEO from '../components/seo'
 
 const IndexPage = () => (
@@ -16,6 +12,7 @@ const IndexPage = () => (
     <SEO title="The Portfolio of Joey Figaro" />
     <Hero />
     <Experience />
+    <Projects />
     <Testimonials />
     {/*<Intro /> */}
     {/*<div className="welcome">

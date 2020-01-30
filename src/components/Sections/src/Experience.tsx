@@ -126,7 +126,7 @@ const Experience = () => (
             </Column>
           </Row>
         </Column>
-        <Column align="flex-start">
+        <Column className={styles.column} align="flex-start">
           <Subheading subtle as="h3">
             04.
           </Subheading>

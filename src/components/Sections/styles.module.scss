@@ -1,7 +1,6 @@
 .Section {
   display: flex;
   max-width: 100%;
-  padding: 0 24px;
   margin: 0 auto;
   justify-content: center;
   flex-direction: column;
@@ -25,9 +24,12 @@
     margin-bottom: 40px;
   }
 
-  @media screen and (min-width: 767px) {
+  @include mq($from: mobile) {
+    padding: 0 24px;
+  }
+
+  @include mq($from: tablet) {
     flex-direction: row;
-    padding: 0;
 
     .column {
       margin-bottom: 0;
@@ -44,7 +46,7 @@
     }
   }
 
-  @media screen and (min-width: 1023px) {
+  @include mq($from: wide) {
     max-width: 1000px;
   }
 }
@@ -60,7 +62,7 @@
   justify-content: flex-start;
   margin-bottom: 80px;
 
-  @media screen and (min-width: 767px) {
+  @include mq($from: tablet) {
     & {
       max-height: 200px;
       margin-bottom: 214px;
@@ -87,7 +89,7 @@
     width: 50%;
   }
 
-  @media screen and (min-width: 767px) {
+  @include mq($from: tablet) {
     & {
       margin-bottom: 214px;
     }

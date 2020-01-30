@@ -13,7 +13,6 @@ const IndexPage = () => (
     <Hero />
     <Experience />
     <Projects />
-    <Testimonials />
     {/*<Intro /> */}
     {/*<div className="welcome">
       <h1>

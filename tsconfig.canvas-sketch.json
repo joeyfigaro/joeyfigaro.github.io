@@ -11,9 +11,9 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "noUnusedLocals": false,
-    "allowJs": true,
     "types": ["node"],
     "typeRoots": ["./node_modules/@types"]
   },
+  "include": ["src/generative/canvas-sketch/*.ts"],
   "exclude": ["node_modules", "public", ".cache"]
 }

@@ -4,18 +4,12 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
 import React from 'react'
 import { IconContext } from 'react-icons'
-import { Helmet } from 'react-helmet'
+// import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { theme } from '../theme'
-// import Header from './header'
 import Footer from './Footer'
-
-import '../styles/typography.scss'
-import '../styles/layout.scss'
 
 const Layout = ({
   children

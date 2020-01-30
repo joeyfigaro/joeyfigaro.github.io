@@ -6,9 +6,11 @@
   "author": "Joey Figaro <joey@joeyfigaro.com>",
   "dependencies": {
     "@types/typography": "^0.16.3",
+    "canvas-sketch": "^0.7.1",
+    "canvas-sketch-util": "^1.10.0",
     "classnames": "^2.2.6",
     "framer-motion": "^1.7.0",
-    "gatsby": "^2.15.18",
+    "gatsby": "^2.19.10",
     "gatsby-image": "^2.2.19",
     "gatsby-plugin-manifest": "^2.2.17",
     "gatsby-plugin-offline": "^3.0.7",
@@ -21,10 +23,11 @@
     "gatsby-plugin-typography": "^2.3.20",
     "gatsby-source-filesystem": "^2.1.24",
     "gatsby-transformer-sharp": "^2.2.15",
+    "nice-color-palettes": "^3.0.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.8.0",
     "react-pose-text": "^3.1.0",
@@ -33,6 +36,7 @@
     "react-three-fiber": "^3.0.15",
     "react-typical": "^0.1.3",
     "react-typography": "^0.16.19",
+    "sass-resources-loader": "^2.0.1",
     "three": "^0.111.0",
     "typeface-inter": "^3.11.2",
     "typeface-ovo": "0.0.71",
@@ -46,7 +50,9 @@
     "@types/react-dom": "^16.9.4",
     "@types/three": "^0.103.2",
     "babel-preset-gatsby": "^0.2.26",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "tsify": "^4.0.1",
+    "typescript": "^3.7.5"
   },
   "keywords": [
     "gatsby"

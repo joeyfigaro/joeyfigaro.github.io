@@ -9,7 +9,7 @@ export default ({
   maxColorRangeEnd = 6,
   fontFamily = '"Andale Mono"',
   palette = ['#aaa', '#666', '#333', '#222', '#111', '#0c0c0c'],
-  characters = '—.-_',
+  characters = '- -_',
   frequencyRangeStart = 0.04,
   frequencyRangeEnd = 1.28,
   spherePointScale = 0.08
@@ -58,7 +58,7 @@ export default ({
   const grid = createGrid()
 
   return ({ context, width, height }) => {
-    context.globalAlpha = 1.0
+    context.globalAlpha = 0.8
     context.fillStyle = '#0c0c0c'
     context.fillRect(0, 0, width, height)
 

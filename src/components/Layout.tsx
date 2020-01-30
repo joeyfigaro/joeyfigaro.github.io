@@ -1,15 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
 import React from 'react'
 import { IconContext } from 'react-icons'
-// import { Helmet } from 'react-helmet'
+import cx from 'classnames'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Footer from './Footer'
+import styles from './styles.module.scss'
+
+// export const LayoutContext = React.createContext({
+//   sidePanelVisible: null,
+//   openSidePanel: null,
+//   closeSidePanel: null
+// })
 
 const Layout = ({
   children
@@ -26,15 +27,24 @@ const Layout = ({
       }
     }
   `)
+  // const [sidePanelVisible, setSidePanelVisible] = React.useState<boolean>(false)
+  // const openSidePanel = React.useCallback(() => setSidePanelVisible(true), [])
+  // const closeSidePanel = React.useCallback(() => setSidePanelVisible(false), [])
 
-  /* className="grt" */
   return (
     <IconContext.Provider
       value={{ color: 'white', style: { width: 21, height: 21 } }}
     >
-      <div className="portfolio">
-        <main>{children}</main>
-        <Footer />
+      {/*
+      <LayoutContext.Provider
+        value={{ sidePanelVisible, closeSidePanel, openSidePanel }}
+      >
+    */}
+      <div className={cx(styles.Perspective)}>
+        <main className={styles.Content}>
+          {children}
+          <Footer />
+        </main>
       </div>
     </IconContext.Provider>
   )

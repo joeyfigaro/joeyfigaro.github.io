@@ -1,3 +1,49 @@
+$mouse_width: 20px;
+$mouse_height: 32px;
+$mouse_color: #fefefe;
+$border_width: 2px;
+$wheel_size: $border_width * 2;
+
+@include keyframes(scroll-indicator) {
+  0% {
+    bottom: 40%;
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 70%;
+    opacity: 0;
+  }
+}
+
+.scrollIcon {
+  width: $mouse_width + $border_width * 2;
+  height: $mouse_height + $border_width * 2;
+
+  .scrollIconInner {
+    width: $mouse_width;
+    height: $mouse_height;
+    position: relative;
+    border-radius: $mouse_width / 2 + $border_width * 2;
+    border: $border_width solid $mouse_color;
+  }
+
+  .scrollIconWheel {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    width: $wheel_size;
+    height: $wheel_size;
+    margin-left: -$wheel_size/2;
+    border-radius: 50%;
+    background-color: $mouse_color;
+
+    @include animation(scroll-indicator 0.9s infinite);
+  }
+}
+
 .Footer {
   display: flex;
   flex-direction: column;
@@ -10,6 +56,17 @@
   @media screen and (min-width: 767px) {
     flex-direction: row;
   }
+}
+
+.hidden {
+  display: none;
+}
+
+.sticky {
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // width: 100%;
 }
 
 .actions {
@@ -56,7 +113,7 @@
     .icons {
       flex-direction: row;
       margin-right: auto;
-      margin-left: 40px;
+      // margin-left: 40px;
     }
 
     .contact {
@@ -79,11 +136,30 @@
   }
 }
 
-.copyright {
+.resumeButton {
+  padding: 7.5px 16px 8.5px;
+  background-color: transparent;
+  color: #fefefe;
+  font-weight: 500;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 2%;
+  line-height: 12px;
+  text-transform: uppercase;
+  border: #fefefe solid 2px;
+  border-radius: 64px;
+}
+
+.copyrightAndScrollIcon {
   margin-left: auto;
   align-items: center;
+  justify-content: center;
   padding: 24px 0;
-  color: #5c5c5c;
+
+  .copyright {
+    color: #5c5c5c;
+    margin: 0;
+  }
 
   @media screen and (min-width: 293px) {
     width: 293px;

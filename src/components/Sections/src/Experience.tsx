@@ -147,6 +147,76 @@ const Experience = () => (
           </Row>
         </Column>
       </Row>
+      <Row className={styles.contentRow}>
+        <Column className={styles.column} align="flex-start">
+          <Subheading subtle as="h3">
+            05.
+          </Subheading>
+          <Subheading
+            as="h2"
+            style={{ marginBottom: '32px', marginTop: '24px' }}
+          >
+            API Development
+          </Subheading>
+          <Row>
+            <Column>
+              <ul className={styles.list}>
+                <li>Node</li>
+                <li>Express/Fastify</li>
+                <li>Mongoose</li>
+                <li>Knex</li>
+                <li>Postgres</li>
+                <li>Mongo</li>
+                <li>Redis</li>
+              </ul>
+            </Column>
+          </Row>
+        </Column>
+        <Column className={styles.column} align="flex-start">
+          <Subheading subtle as="h3">
+            06.
+          </Subheading>
+          <Subheading
+            as="h2"
+            style={{ marginBottom: '32px', marginTop: '24px' }}
+          >
+            Infrastructure
+          </Subheading>
+          <Row>
+            <Column align="flex-start">
+              <ul className={styles.list}>
+                <li>AWS</li>
+                <li>Codeship</li>
+                <li>Sentry</li>
+                <li>Now</li>
+                <li>Ngrok</li>
+                <li>Docker</li>
+              </ul>
+            </Column>
+          </Row>
+        </Column>
+        <Column className={styles.column} align="flex-start">
+          <Subheading subtle as="h3">
+            07.
+          </Subheading>
+          <Subheading
+            as="h2"
+            style={{ marginBottom: '32px', marginTop: '24px' }}
+          >
+            Testing
+          </Subheading>
+          <Row>
+            <Column align="flex-start">
+              <ul className={styles.list}>
+                <li>Jest</li>
+                <li>Tape</li>
+                <li>React Testing Library</li>
+                <li>Enzyme</li>
+              </ul>
+            </Column>
+          </Row>
+        </Column>
+      </Row>
     </Column>
   </Section>
 )

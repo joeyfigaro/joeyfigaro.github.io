@@ -12,6 +12,7 @@ const GenerativeASCII = () => {
       marginMultiplier: 0.06
     })
     sketch(painting, { dimensions: [680, 420], canvas: canvasRef })
+    console.log('calling canvas-sketch')
   }, [])
 
   return <canvas className={styles.ASCIICanvas} ref={cv => (canvasRef = cv)} />

@@ -1,9 +1,18 @@
+#___gatsby {
+  height: 100%;
+  width: 100%;
+}
+
 html {
-  // font-family: 'Cartograph CF', monospace;
+  height: 100%;
+  width: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
   margin: 0;
   -webkit-font-smoothing: antialiased;

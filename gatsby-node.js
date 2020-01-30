@@ -19,6 +19,7 @@ exports.onCreateWebpackConfig = ({
         loader: 'sass-resources-loader',
         options: {
           resources: [
+            'src/styles/_mixins.scss',
             'src/styles/_media.scss',
             'src/styles/_layout.scss',
             'src/styles/_typography.scss'

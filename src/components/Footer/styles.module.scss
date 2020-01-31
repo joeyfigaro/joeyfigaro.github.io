@@ -44,6 +44,12 @@ $wheel_size: $border_width * 2;
   }
 }
 
+.FooterWrapper {
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+}
+
 .Footer {
   display: flex;
   flex-direction: column;

@@ -11,7 +11,7 @@ const GenerativeASCII = () => {
     const painting = asciiPainter({
       marginMultiplier: 0.06
     })
-    sketch(painting, { dimensions: [680, 420], canvas: canvasRef })
+    sketch(painting, { dimensions: [440, 440], canvas: canvasRef })
     console.log('calling canvas-sketch')
   }, [])
 

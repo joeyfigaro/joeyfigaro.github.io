@@ -17,7 +17,7 @@ class Hero extends React.Component {
       <Section className={styles.Hero}>
         <div className={styles.HeadingShadow}>
           <Heading className={styles.Heading} xl>
-            I build engaging interfaces, applications, and experiences
+            I build engaging experiences, interfaces, &amp; applications
           </Heading>
         </div>
         <Curves />

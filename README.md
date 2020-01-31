@@ -10,6 +10,6 @@ Home for my personal projects and experience. At time of writing, includes `Skil
 - `canvas-sketch` and friends
 
 ### Todo
-- [] Contact form
-- [] Links to projects
-- [] Brush up styles for tablet
+- [ ] Contact form
+- [ ] Links to projects
+- [ ] Brush up styles for tablet

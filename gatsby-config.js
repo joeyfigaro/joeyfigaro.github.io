@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/joeyfigaro.com',
+  pathPrefix: '/',
   siteMetadata: {
     title: `Mobile and Web Development — Personal Showcase | Joey Figaro`,
     description: `I'm an RVA native who lives to build interfaces and applications for the web, mobile, and everything in-between.`,

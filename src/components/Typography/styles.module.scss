@@ -1,0 +1,62 @@
+.Heading {
+  font-size: 28px;
+  line-height: 32px;
+  font-family: 'Ovo', 'Georgia', 'serif';
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 1023px) {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -1%;
+    margin-bottom: 0;
+  }
+}
+
+.subtle {
+  color: #636363;
+  letter-spacing: 3%;
+}
+
+.xl {
+  font-size: 28px;
+  line-height: 34px;
+
+  @media screen and (min-width: 767px) {
+    font-size: 48px;
+    line-height: 55px;
+  }
+}
+
+.h2 {
+  font-family: 'Inter', 'Helvetica', 'sans-serif';
+  font-size: 16px;
+  line-height: 15px;
+  font-weight: 800;
+
+  @media screen and (min-width: 767px) {
+    font-size: 18px;
+    letter-spacing: 1%;
+    font-weight: 800;
+  }
+}
+
+.h3 {
+  font-family: 'Cartograph CF', 'monospaced';
+  font-size: 11px;
+  letter-spacing: 1%;
+  font-weight: 600;
+
+  @media screen and (min-width: 767px) {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+.h4 {
+}
+
+.h5 {
+}
+
+.h6 {
+}

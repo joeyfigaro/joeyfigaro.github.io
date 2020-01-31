@@ -1,0 +1,134 @@
+.Section {
+  display: flex;
+  max-width: 70%;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+
+  .horizontal {
+    flex-direction: row;
+  }
+
+  .column {
+    margin-bottom: 24px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .contentRow {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  @include mq($until: mobile) {
+    padding: 0 24px;
+  }
+
+  @include mq($from: tablet) {
+    flex-direction: row;
+
+    .column {
+      margin-bottom: 0;
+    }
+
+    .content {
+      margin-left: auto;
+      width: calc(100% - 331px);
+    }
+
+    .contentRow {
+      flex-direction: row;
+      margin-bottom: 80px;
+    }
+  }
+
+  @include mq($from: wide) {
+    max-width: 1000px;
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Projects {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+
+  .projectColumn {
+    padding-right: 16px;
+  }
+
+  @include mq($from: tablet) {
+    & {
+      max-height: 200px;
+      margin-bottom: 214px;
+    }
+
+    .projectColumn {
+      width: 290px;
+    }
+  }
+}
+
+.Experience {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+
+  .general {
+    min-width: 360px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .halfWidth {
+    width: 50%;
+  }
+
+  @include mq($from: tablet) {
+    & {
+      margin-bottom: 214px;
+    }
+  }
+}
+
+.Feedback {
+  margin-bottom: 80px;
+
+  .Quote {
+    font-family: 'Ovo', serif;
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 24px;
+  }
+
+  .QuoteAttribution {
+    margin: 0;
+    color: #a3a3a3;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .QuoteTitle {
+    margin: 0;
+    color: #636363;
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 400;
+  }
+
+  @include mq($from: tablet) {
+    & {
+      margin-bottom: 214px;
+    }
+  }
+}

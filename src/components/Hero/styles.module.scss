@@ -1,0 +1,39 @@
+.Hero {
+  height: 70vh;
+  position: relative;
+  justify-content: flex-start !important;
+
+  @media screen and (min-width: 767px) {
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.HeadingShadow {
+  height: 100%;
+  // width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Heading {
+  position: relative;
+  z-index: 1;
+  text-shadow: rgba(12, 12, 12, 0.8) 1px 1px 28px;
+
+  @media screen and (min-width: 767px) {
+    max-width: 665px;
+  }
+}
+
+.ASCIICanvas {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  height: 400px;
+}

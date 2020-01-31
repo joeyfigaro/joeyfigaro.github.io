@@ -1,26 +1,22 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import { IconContext } from 'react-icons'
+import cx from 'classnames'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
+import Footer from './Footer'
+import styles from './styles.module.scss'
 
-import Header from './header';
-import Footer from './Footer';
-
-import '../styles/typography.scss';
-import '../styles/layout.scss';
-import '../styles/portfolio.scss';
+// export const LayoutContext = React.createContext({
+//   sidePanelVisible: null,
+//   openSidePanel: null,
+//   closeSidePanel: null
+// })
 
 const Layout = ({
   children
 }: {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode
+  className?: string
 }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -30,14 +26,28 @@ const Layout = ({
         }
       }
     }
-  `);
+  `)
+  // const [sidePanelVisible, setSidePanelVisible] = React.useState<boolean>(false)
+  // const openSidePanel = React.useCallback(() => setSidePanelVisible(true), [])
+  // const closeSidePanel = React.useCallback(() => setSidePanelVisible(false), [])
 
   return (
-    <div className="grt">
-      <main>{children}</main>
-      <Footer />
-    </div>
-  );
-};
+    <IconContext.Provider
+      value={{ color: 'white', style: { width: 21, height: 21 } }}
+    >
+      {/*
+      <LayoutContext.Provider
+        value={{ sidePanelVisible, closeSidePanel, openSidePanel }}
+      >
+    */}
+      <div className={cx(styles.Perspective)}>
+        <main className={styles.Content}>
+          {children}
+          <Footer />
+        </main>
+      </div>
+    </IconContext.Provider>
+  )
+}
 
-export default Layout;
+export default Layout

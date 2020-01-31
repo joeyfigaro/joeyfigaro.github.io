@@ -5,6 +5,13 @@ module.exports = {
     author: `@joeyfigaro`
   },
   plugins: [
+    'gatsby-plugin-react-svg',
+    // {
+    //   resolve: 'gatsby-plugin-typography',
+    //   options: {
+    //     pathToConfigModule: './src/typography.ts'
+    //   }
+    // },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
@@ -28,29 +35,20 @@ module.exports = {
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
     },
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-typescript`,
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        stats: false,
-        format: ['woff', 'woff2'],
-        fonts: [
-          {
-            family: 'Ovo',
-            variants: [`400`, `600`, `800`]
-          },
-          {
-            family: `Playfair Display`,
-            variants: [`400`, `700`, `900`]
-          },
-          {
-            family: `Source Sans Pro`,
-            variants: [`200`, `300`, `400`, `600`, `700`]
-          }
-        ]
-      }
-    }
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     stats: false,
+    //     format: ['woff', 'woff2'],
+    //     fonts: [
+    //       {
+    //         family: 'Ovo',
+    //         variants: [`400`, `600`, `800`]
+    //       }
+    //     ]
+    //   }
+    // }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

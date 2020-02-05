@@ -12,6 +12,7 @@
     "framer-motion": "^1.7.0",
     "gatsby": "^2.19.10",
     "gatsby-image": "^2.2.19",
+    "gatsby-plugin-google-analytics": "^2.1.35",
     "gatsby-plugin-manifest": "^2.2.17",
     "gatsby-plugin-offline": "^3.0.7",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
@@ -62,13 +63,13 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -b master -d public"
+    "deploy": "npm run build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",

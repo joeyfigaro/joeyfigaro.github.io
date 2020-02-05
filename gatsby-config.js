@@ -6,6 +6,15 @@ module.exports = {
     author: `@joeyfigaro`
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-35894979-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true
+      }
+    },
     'gatsby-plugin-react-svg',
     // {
     //   resolve: 'gatsby-plugin-typography',
@@ -36,7 +45,7 @@ module.exports = {
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
     },
-    `gatsby-plugin-typescript`,
+    `gatsby-plugin-typescript`
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
@@ -54,4 +63,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ]
-};
+}

@@ -35,11 +35,6 @@ const Layout = ({
     <IconContext.Provider
       value={{ color: 'white', style: { width: 21, height: 21 } }}
     >
-      {/*
-      <LayoutContext.Provider
-        value={{ sidePanelVisible, closeSidePanel, openSidePanel }}
-      >
-    */}
       <div className={cx(styles.Perspective)}>
         <main className={styles.Content}>
           {children}

@@ -41,7 +41,7 @@
     "react-typography": "^0.16.19",
     "react-visibility-sensor": "^5.1.1",
     "sass-resources-loader": "^2.0.1",
-    "three": "^0.111.0",
+    "three": "^0.125.0",
     "typeface-inter": "^3.11.2",
     "typeface-ovo": "0.0.71",
     "typography": "^0.16.19"
